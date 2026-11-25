@@ -68,10 +68,12 @@ function has(cmd) {
 
 // Install a page's dependencies. Each page has its own node_modules; with pnpm the
 // files are hard links into pnpm's global store, so a page costs almost no disk.
+// --no-frozen-lockfile: pnpm freezes the lockfile when CI=true (some agent sandboxes
+// set it), which would break add/apply after they change package.json.
 export function install(pageDir, { npm = false } = {}) {
   const wantNpm = npm || process.env.HTML_PAGE_PM === "npm"
   if (!wantNpm && has("pnpm")) {
-    const r = run("pnpm", ["install", "--ignore-workspace", "--prefer-offline", "--config.confirmModulesPurge=false"], { cwd: pageDir })
+    const r = run("pnpm", ["install", "--ignore-workspace", "--prefer-offline", "--no-frozen-lockfile", "--config.confirmModulesPurge=false"], { cwd: pageDir })
     if (r.status !== 0) fail("pnpm install failed (see above). If this is the first install, check the network connection.")
     return "pnpm"
   }
