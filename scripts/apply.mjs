@@ -15,5 +15,5 @@ const { values: o } = parseArgs({
 })
 const dir = findPageDir(o.dir)
 const { kit, depsChanged, themeSource } = applyKit(dir)
-console.log(`html-page: applied kit.json (style ${kit.style}, theme ${themeSource}${kit.icons ? `, icons ${kit.icons}` : ""}${kit.ui ? `, ui ${kit.ui}` : ""})`)
+console.log(`ohmypage: applied kit.json (style ${kit.style}, theme ${themeSource}${kit.icons ? `, icons ${kit.icons}` : ""}${kit.ui ? `, ui ${kit.ui}` : ""})`)
 if (depsChanged && !o["no-install"]) install(dir, { npm: o.npm })

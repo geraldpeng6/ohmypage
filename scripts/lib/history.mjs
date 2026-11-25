@@ -14,7 +14,7 @@ export function historyFile() {
 }
 
 export function historyDisabled() {
-  return /^(off|0|false|no)$/i.test(process.env.HTML_PAGE_HISTORY ?? "")
+  return /^(off|0|false|no)$/i.test(process.env.OHMYPAGE_HISTORY ?? "")
 }
 
 export function detectAgent() {

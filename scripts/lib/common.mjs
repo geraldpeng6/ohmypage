@@ -1,4 +1,4 @@
-// Shared helpers for the html-page scripts. Node 20.19+, no dependencies.
+// Shared helpers for the ohmypage scripts. Node 20.19+, no dependencies.
 
 import fs from "node:fs"
 import os from "node:os"
@@ -11,7 +11,7 @@ export const ASSETS = path.join(SKILL_ROOT, "assets")
 const isWin = process.platform === "win32"
 
 export function fail(message, code = 1) {
-  console.error(`html-page: ${message}`)
+  console.error(`ohmypage: ${message}`)
   process.exit(code)
 }
 
@@ -49,10 +49,10 @@ export function findPageDir(dir) {
 
 // Where the history log lives. Same folder for every agent on the machine.
 export function dataDir() {
-  if (process.env.HTML_PAGE_HOME) return path.resolve(process.env.HTML_PAGE_HOME)
-  if (isWin) return path.join(process.env.LOCALAPPDATA || path.join(os.homedir(), "AppData", "Local"), "html-page")
+  if (process.env.OHMYPAGE_HOME) return path.resolve(process.env.OHMYPAGE_HOME)
+  if (isWin) return path.join(process.env.LOCALAPPDATA || path.join(os.homedir(), "AppData", "Local"), "ohmypage")
   const xdg = process.env.XDG_DATA_HOME
-  return path.join(xdg && path.isAbsolute(xdg) ? xdg : path.join(os.homedir(), ".local", "share"), "html-page")
+  return path.join(xdg && path.isAbsolute(xdg) ? xdg : path.join(os.homedir(), ".local", "share"), "ohmypage")
 }
 
 export function run(cmd, args, opts = {}) {
@@ -71,7 +71,7 @@ function has(cmd) {
 // --no-frozen-lockfile: pnpm freezes the lockfile when CI=true (some agent sandboxes
 // set it), which would break add/apply after they change package.json.
 export function install(pageDir, { npm = false } = {}) {
-  const wantNpm = npm || process.env.HTML_PAGE_PM === "npm"
+  const wantNpm = npm || process.env.OHMYPAGE_PM === "npm"
   if (!wantNpm && has("pnpm")) {
     const r = run("pnpm", ["install", "--ignore-workspace", "--prefer-offline", "--no-frozen-lockfile", "--config.confirmModulesPurge=false"], { cwd: pageDir })
     if (r.status !== 0) fail("pnpm install failed (see above). If this is the first install, check the network connection.")

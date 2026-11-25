@@ -13,9 +13,9 @@ import { fileURLToPath } from "node:url"
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..")
 const quick = process.argv.includes("--quick")
-const tmp = fs.mkdtempSync(path.join(os.tmpdir(), "html-page-test-"))
+const tmp = fs.mkdtempSync(path.join(os.tmpdir(), "ohmypage-test-"))
 const home = path.join(tmp, "home")
-const env = { ...process.env, HTML_PAGE_HOME: home, CLAUDE_CODE_SESSION_ID: "", CODEX_THREAD_ID: "", AI_AGENT: "test-agent" }
+const env = { ...process.env, OHMYPAGE_HOME: home, CLAUDE_CODE_SESSION_ID: "", CODEX_THREAD_ID: "", AI_AGENT: "test-agent" }
 
 // An outer project whose config must not leak into pages created inside it.
 const outer = path.join(tmp, "outer")
@@ -128,7 +128,7 @@ step("themes: base + accent, and a user theme by name", () => {
 step("deterministic build", () => {
   sh("build.mjs", ["--dir", react, "--no-log"])
   const a = sha(`${react}.html`)
-  fs.rmSync(path.join(react, ".html-page"), { recursive: true, force: true })
+  fs.rmSync(path.join(react, ".ohmypage"), { recursive: true, force: true })
   sh("build.mjs", ["--dir", react, "--no-log"])
   assert.equal(sha(`${react}.html`), a)
 })
@@ -163,8 +163,8 @@ step("history: revisions, same-session replace, unchanged skip, label, note limi
   assert.equal(Array.from(h[1].note).length, 120)
 
   touch("c")
-  sh("build.mjs", ["--dir", react, "--session", "s3"], { HTML_PAGE_HISTORY: "off" })
-  assert.equal(history().length, 2, "HTML_PAGE_HISTORY=off still logged")
+  sh("build.mjs", ["--dir", react, "--session", "s3"], { OHMYPAGE_HISTORY: "off" })
+  assert.equal(history().length, 2, "OHMYPAGE_HISTORY=off still logged")
 })
 
 for (const ui of ["basecoat", "daisyui", "none"]) {

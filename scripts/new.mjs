@@ -55,9 +55,9 @@ writeJson(path.join(dir, "package.json"), { name: pkgName, private: true, type: 
 writeJson(path.join(dir, "kit.json"), kit)
 
 const { themeSource } = applyKit(dir)
-console.log(`html-page: created ${dir} (route ${kit.route}, style ${kit.style}, theme ${themeSource}${kit.icons ? `, icons ${kit.icons}` : ""})`)
+console.log(`ohmypage: created ${dir} (route ${kit.route}, style ${kit.style}, theme ${themeSource}${kit.icons ? `, icons ${kit.icons}` : ""})`)
 if (!o["no-install"]) {
   const pm = install(dir, { npm: o.npm })
-  console.log(`html-page: dependencies installed with ${pm}`)
+  console.log(`ohmypage: dependencies installed with ${pm}`)
 }
-console.log(`html-page: next: edit ${kit.route === "react" ? "src/App.tsx" : "index.html"}, then node <skill>/scripts/build.mjs --dir ${dir}`)
+console.log(`ohmypage: next: edit ${kit.route === "react" ? "src/App.tsx" : "index.html"}, then node <skill>/scripts/build.mjs --dir ${dir}`)

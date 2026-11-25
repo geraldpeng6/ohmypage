@@ -61,6 +61,6 @@ for (const n of want.lib) copy(path.join(src, m.lib[n].file), path.join(dir, "sr
 
 writeIfChanged(path.join(dir, "src", "styles", "style.css"), styleCss(kit.style ?? "vega", dir))
 const changed = syncDeps(dir, kit, [...npm])
-if (added.length) console.log(`html-page: added ${added.join(", ")}`)
-if (kept.length) console.log(`html-page: kept existing ${kept.join(", ")} (use --overwrite to replace)`)
+if (added.length) console.log(`ohmypage: added ${added.join(", ")}`)
+if (kept.length) console.log(`ohmypage: kept existing ${kept.join(", ")} (use --overwrite to replace)`)
 if (changed && !o["no-install"]) install(dir, { npm: o.npm })

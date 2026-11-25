@@ -1,4 +1,4 @@
-# html-page
+# ohmypage
 
 An [Agent Skill](https://agentskills.io) for coding agents (Claude Code, Codex and others that read `SKILL.md`): build a polished single-file HTML page that opens offline, from any folder.
 
@@ -16,8 +16,8 @@ Requirements: Node.js 20.19+ and [pnpm](https://pnpm.io/installation). macOS, Li
 Put this folder in your agent's skills directory, for example:
 
 ```bash
-git clone https://github.com/<owner>/html-page ~/.claude/skills/html-page   # Claude Code
-git clone https://github.com/<owner>/html-page ~/.codex/skills/html-page    # Codex
+git clone https://github.com/geraldpeng6/ohmypage ~/.claude/skills/ohmypage   # Claude Code
+git clone https://github.com/geraldpeng6/ohmypage ~/.codex/skills/ohmypage    # Codex
 ```
 
 Then ask for a page ("make an HTML report comparing these benchmark results"). The agent reads `SKILL.md` and does the rest.
@@ -25,10 +25,10 @@ Then ask for a page ("make an HTML report comparing these benchmark results"). T
 ## Use the scripts directly
 
 ```bash
-node html-page/scripts/new.mjs gpu-report --style mira --theme zinc --accent blue --kind dashboard
-node html-page/scripts/add.mjs --dir gpu-report table card tabs chart
+node ohmypage/scripts/new.mjs gpu-report --style mira --theme zinc --accent blue --kind dashboard
+node ohmypage/scripts/add.mjs --dir gpu-report table card tabs chart
 # edit gpu-report/src/App.tsx
-node html-page/scripts/build.mjs --dir gpu-report --note "GPU throughput comparison"
+node ohmypage/scripts/build.mjs --dir gpu-report --note "GPU throughput comparison"
 open gpu-report.html
 ```
 
@@ -42,7 +42,7 @@ open gpu-report.html
 
 ## History log
 
-`~/.local/share/html-page/history.jsonl` (or `$XDG_DATA_HOME/html-page/`, `%LOCALAPPDATA%\html-page\` on Windows, `$HTML_PAGE_HOME` to override). Set `HTML_PAGE_HISTORY=off` to disable. Format: [references/history-log.md](references/history-log.md).
+`~/.local/share/ohmypage/history.jsonl` (or `$XDG_DATA_HOME/ohmypage/`, `%LOCALAPPDATA%\ohmypage\` on Windows, `$OHMYPAGE_HOME` to override). Set `OHMYPAGE_HISTORY=off` to disable. Format: [references/history-log.md](references/history-log.md).
 
 ## Maintaining
 

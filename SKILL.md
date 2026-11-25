@@ -1,5 +1,5 @@
 ---
-name: html-page
+name: ohmypage
 description: Build a polished, self-contained single-file HTML page that opens offline - a report, dashboard, article, explainer, prototype, landing page or small tool - from any folder. React + shadcn/ui (all 8 styles) or plain HTML + Basecoat/daisyUI, on Tailwind CSS v4. Keeps a history log so pages made earlier, and their look, can be found and reused. Use when the user asks for a web page, an HTML report or dashboard, a one-pager, a visual write-up, or wants to redo or reuse "that page I made before".
 license: MIT
 compatibility: Needs Node.js 20.19+ and pnpm (npm works with --npm but copies ~150 MB into each page). Network is needed the first time a package version is installed. macOS, Linux and Windows.
@@ -7,7 +7,7 @@ metadata:
   version: "0.1.0"
 ---
 
-# html-page
+# ohmypage
 
 Make one HTML file that looks designed, works offline, and can be found again later.
 
@@ -97,9 +97,9 @@ Avoid anything that loads from a CDN or needs an API key at runtime: the page mu
 
 `build.mjs` appends one line per page version to a JSONL file shared by all agents on the machine:
 
-- macOS/Linux: `$XDG_DATA_HOME/html-page/history.jsonl` (default `~/.local/share/html-page/history.jsonl`)
-- Windows: `%LOCALAPPDATA%\html-page\history.jsonl`
-- Override the folder with `HTML_PAGE_HOME`; turn logging off with `HTML_PAGE_HISTORY=off`.
+- macOS/Linux: `$XDG_DATA_HOME/ohmypage/history.jsonl` (default `~/.local/share/ohmypage/history.jsonl`)
+- Windows: `%LOCALAPPDATA%\ohmypage\history.jsonl`
+- Override the folder with `OHMYPAGE_HOME`; turn logging off with `OHMYPAGE_HISTORY=off`.
 
 Pass `--note` (what the page is and why, ≤120 characters), `--kind`, and `--label` when the user names a version ("0.2", "for the board"). The agent and session are detected; pass `--agent`/`--session` if your tool doesn't expose them. Field rules and how to append a line by hand (for pages built without these scripts): [references/history-log.md](references/history-log.md).
 

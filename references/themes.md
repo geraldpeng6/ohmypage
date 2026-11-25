@@ -19,7 +19,7 @@ These are shadcn's own palettes (vendored, MIT). Without an accent, primary is n
 `"theme"` can also be:
 
 - **A path to a `.css` file** (relative to the page folder or absolute), e.g. `"theme": "../brand.css"`.
-- **A name of a file in the user's theme folder**: `<data dir>/themes/<name>.css`, where `<data dir>` is `~/.local/share/html-page` (macOS/Linux, or `$XDG_DATA_HOME/html-page`) or `%LOCALAPPDATA%\html-page` (Windows), or `$HTML_PAGE_HOME`. Put a personal or company theme there once and use `"theme": "<name>"` on every page.
+- **A name of a file in the user's theme folder**: `<data dir>/themes/<name>.css`, where `<data dir>` is `~/.local/share/ohmypage` (macOS/Linux, or `$XDG_DATA_HOME/ohmypage`) or `%LOCALAPPDATA%\ohmypage` (Windows), or `$OHMYPAGE_HOME`. Put a personal or company theme there once and use `"theme": "<name>"` on every page.
 
 A theme file defines any of these variables; missing ones fall back to nothing, so start from a full one (copy `src/styles/theme.css` from any page):
 
