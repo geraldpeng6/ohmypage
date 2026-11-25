@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en" class="style-vega" data-color-scheme="system">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>%PAGE_TITLE%</title>
+    <script>
+      // Applies the color scheme before first paint. kit.json "colorScheme" sets data-color-scheme.
+      ;(function () {
+        var root = document.documentElement
+        var mq = window.matchMedia("(prefers-color-scheme: dark)")
+        function apply() {
+          var s = root.getAttribute("data-color-scheme")
+          root.classList.toggle("dark", s === "dark" || (s !== "light" && mq.matches))
+        }
+        apply()
+        mq.addEventListener("change", apply)
+      })()
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

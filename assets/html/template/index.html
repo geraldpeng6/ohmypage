@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en" data-color-scheme="system">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>%PAGE_TITLE%</title>
+    <script>
+      // Applies the color scheme before first paint. kit.json "colorScheme" sets data-color-scheme.
+      ;(function () {
+        var root = document.documentElement
+        var mq = window.matchMedia("(prefers-color-scheme: dark)")
+        function apply() {
+          var s = root.getAttribute("data-color-scheme")
+          var dark = s === "dark" || (s !== "light" && mq.matches)
+          root.classList.toggle("dark", dark)
+          var name = root.getAttribute(dark ? "data-theme-dark" : "data-theme-light")
+          if (name) root.setAttribute("data-theme", name) // daisyUI themes
+          else root.removeAttribute("data-theme")
+        }
+        apply()
+        mq.addEventListener("change", apply)
+      })()
+    </script>
+    <link rel="stylesheet" href="/src/main.css" />
+  </head>
+  <body>
+    <main class="mx-auto max-w-3xl px-6 py-16">
+      <h1 class="text-3xl font-semibold tracking-tight">%PAGE_TITLE%</h1>
+      <p class="text-muted-foreground mt-3">Replace this with the page.</p>
+    </main>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,503 @@
+{
+  "source": "https://github.com/shadcn-ui/ui",
+  "commit": "055aa6b7837b1808456a24beb4c97a677864aa82",
+  "components": {
+    "accordion": {
+      "ui": [],
+      "hooks": [],
+      "lib": [],
+      "npm": []
+    },
+    "alert-dialog": {
+      "ui": [
+        "button"
+      ],
+      "hooks": [],
+      "lib": [],
+      "npm": []
+    },
+    "alert": {
+      "ui": [],
+      "hooks": [],
+      "lib": [],
+      "npm": []
+    },
+    "aspect-ratio": {
+      "ui": [],
+      "hooks": [],
+      "lib": [],
+      "npm": []
+    },
+    "attachment": {
+      "ui": [
+        "button"
+      ],
+      "hooks": [],
+      "lib": [],
+      "npm": []
+    },
+    "avatar": {
+      "ui": [],
+      "hooks": [],
+      "lib": [],
+      "npm": []
+    },
+    "badge": {
+      "ui": [],
+      "hooks": [],
+      "lib": [],
+      "npm": []
+    },
+    "breadcrumb": {
+      "ui": [],
+      "hooks": [],
+      "lib": [],
+      "npm": []
+    },
+    "bubble": {
+      "ui": [],
+      "hooks": [],
+      "lib": [],
+      "npm": []
+    },
+    "button-group": {
+      "ui": [
+        "separator"
+      ],
+      "hooks": [],
+      "lib": [],
+      "npm": []
+    },
+    "button": {
+      "ui": [],
+      "hooks": [],
+      "lib": [],
+      "npm": []
+    },
+    "calendar": {
+      "ui": [
+        "button"
+      ],
+      "hooks": [],
+      "lib": [],
+      "npm": [
+        "react-day-picker"
+      ]
+    },
+    "card": {
+      "ui": [],
+      "hooks": [],
+      "lib": [],
+      "npm": []
+    },
+    "carousel": {
+      "ui": [
+        "button"
+      ],
+      "hooks": [],
+      "lib": [],
+      "npm": [
+        "embla-carousel-react"
+      ]
+    },
+    "chart": {
+      "ui": [],
+      "hooks": [],
+      "lib": [],
+      "npm": [
+        "recharts"
+      ]
+    },
+    "checkbox": {
+      "ui": [],
+      "hooks": [],
+      "lib": [],
+      "npm": []
+    },
+    "code-block": {
+      "ui": [
+        "button"
+      ],
+      "hooks": [],
+      "lib": [],
+      "npm": []
+    },
+    "collapsible": {
+      "ui": [],
+      "hooks": [],
+      "lib": [],
+      "npm": []
+    },
+    "combobox": {
+      "ui": [
+        "button",
+        "input-group"
+      ],
+      "hooks": [],
+      "lib": [],
+      "npm": [
+        "@base-ui/react"
+      ]
+    },
+    "command": {
+      "ui": [
+        "dialog",
+        "input-group"
+      ],
+      "hooks": [],
+      "lib": [],
+      "npm": [
+        "cmdk"
+      ]
+    },
+    "context-menu": {
+      "ui": [],
+      "hooks": [],
+      "lib": [],
+      "npm": []
+    },
+    "dialog": {
+      "ui": [
+        "button"
+      ],
+      "hooks": [],
+      "lib": [],
+      "npm": []
+    },
+    "direction": {
+      "ui": [],
+      "hooks": [],
+      "lib": [],
+      "npm": []
+    },
+    "drawer": {
+      "ui": [],
+      "hooks": [],
+      "lib": [],
+      "npm": [
+        "vaul"
+      ]
+    },
+    "dropdown-menu": {
+      "ui": [],
+      "hooks": [],
+      "lib": [],
+      "npm": []
+    },
+    "empty": {
+      "ui": [],
+      "hooks": [],
+      "lib": [],
+      "npm": []
+    },
+    "field": {
+      "ui": [
+        "label",
+        "separator"
+      ],
+      "hooks": [],
+      "lib": [],
+      "npm": []
+    },
+    "hover-card": {
+      "ui": [],
+      "hooks": [],
+      "lib": [],
+      "npm": []
+    },
+    "input-group": {
+      "ui": [
+        "button",
+        "input",
+        "textarea"
+      ],
+      "hooks": [],
+      "lib": [],
+      "npm": []
+    },
+    "input-otp": {
+      "ui": [],
+      "hooks": [],
+      "lib": [],
+      "npm": [
+        "input-otp"
+      ]
+    },
+    "input": {
+      "ui": [],
+      "hooks": [],
+      "lib": [],
+      "npm": []
+    },
+    "item": {
+      "ui": [
+        "separator"
+      ],
+      "hooks": [],
+      "lib": [],
+      "npm": []
+    },
+    "kbd": {
+      "ui": [],
+      "hooks": [],
+      "lib": [],
+      "npm": []
+    },
+    "label": {
+      "ui": [],
+      "hooks": [],
+      "lib": [],
+      "npm": []
+    },
+    "marker": {
+      "ui": [],
+      "hooks": [],
+      "lib": [],
+      "npm": []
+    },
+    "menubar": {
+      "ui": [],
+      "hooks": [],
+      "lib": [],
+      "npm": []
+    },
+    "message-scroller": {
+      "ui": [
+        "button"
+      ],
+      "hooks": [],
+      "lib": [],
+      "npm": [
+        "@shadcn/react"
+      ]
+    },
+    "message": {
+      "ui": [],
+      "hooks": [],
+      "lib": [],
+      "npm": []
+    },
+    "native-select": {
+      "ui": [],
+      "hooks": [],
+      "lib": [],
+      "npm": []
+    },
+    "navigation-menu": {
+      "ui": [],
+      "hooks": [],
+      "lib": [],
+      "npm": []
+    },
+    "pagination": {
+      "ui": [
+        "button"
+      ],
+      "hooks": [],
+      "lib": [],
+      "npm": []
+    },
+    "popover": {
+      "ui": [],
+      "hooks": [],
+      "lib": [],
+      "npm": []
+    },
+    "progress": {
+      "ui": [],
+      "hooks": [],
+      "lib": [],
+      "npm": []
+    },
+    "questionnaire": {
+      "ui": [
+        "button"
+      ],
+      "hooks": [],
+      "lib": [],
+      "npm": [
+        "@shadcn/react"
+      ]
+    },
+    "radio-group": {
+      "ui": [],
+      "hooks": [],
+      "lib": [],
+      "npm": []
+    },
+    "resizable": {
+      "ui": [],
+      "hooks": [],
+      "lib": [],
+      "npm": [
+        "react-resizable-panels"
+      ]
+    },
+    "scroll-area": {
+      "ui": [],
+      "hooks": [],
+      "lib": [],
+      "npm": []
+    },
+    "select": {
+      "ui": [],
+      "hooks": [],
+      "lib": [],
+      "npm": []
+    },
+    "separator": {
+      "ui": [],
+      "hooks": [],
+      "lib": [],
+      "npm": []
+    },
+    "sheet": {
+      "ui": [
+        "button"
+      ],
+      "hooks": [],
+      "lib": [],
+      "npm": []
+    },
+    "sidebar": {
+      "ui": [
+        "button",
+        "input",
+        "separator",
+        "sheet",
+        "skeleton",
+        "tooltip"
+      ],
+      "hooks": [
+        "use-mobile"
+      ],
+      "lib": [],
+      "npm": []
+    },
+    "skeleton": {
+      "ui": [],
+      "hooks": [],
+      "lib": [],
+      "npm": []
+    },
+    "slider": {
+      "ui": [],
+      "hooks": [],
+      "lib": [],
+      "npm": []
+    },
+    "sonner": {
+      "ui": [],
+      "hooks": [],
+      "lib": [],
+      "npm": [
+        "sonner"
+      ]
+    },
+    "spinner": {
+      "ui": [],
+      "hooks": [],
+      "lib": [],
+      "npm": []
+    },
+    "switch": {
+      "ui": [],
+      "hooks": [],
+      "lib": [],
+      "npm": []
+    },
+    "table": {
+      "ui": [],
+      "hooks": [],
+      "lib": [],
+      "npm": []
+    },
+    "tabs": {
+      "ui": [],
+      "hooks": [],
+      "lib": [],
+      "npm": []
+    },
+    "textarea": {
+      "ui": [],
+      "hooks": [],
+      "lib": [],
+      "npm": []
+    },
+    "toggle-group": {
+      "ui": [
+        "toggle"
+      ],
+      "hooks": [],
+      "lib": [],
+      "npm": []
+    },
+    "toggle": {
+      "ui": [],
+      "hooks": [],
+      "lib": [],
+      "npm": []
+    },
+    "tooltip": {
+      "ui": [],
+      "hooks": [],
+      "lib": [],
+      "npm": []
+    },
+    "trace": {
+      "ui": [
+        "collapsible"
+      ],
+      "hooks": [],
+      "lib": [],
+      "npm": []
+    }
+  },
+  "hooks": {
+    "use-highlighted-code": {
+      "file": "hooks/use-highlighted-code.ts",
+      "ui": [],
+      "hooks": [],
+      "lib": [
+        "highlighter"
+      ],
+      "npm": []
+    },
+    "use-mobile": {
+      "file": "hooks/use-mobile.ts",
+      "ui": [],
+      "hooks": [],
+      "lib": [],
+      "npm": []
+    }
+  },
+  "lib": {
+    "highlighter": {
+      "file": "lib/highlighter.tsx",
+      "ui": [],
+      "hooks": [],
+      "lib": [],
+      "npm": [
+        "shiki"
+      ]
+    }
+  },
+  "iconDeps": {
+    "lucide": [
+      "lucide-react"
+    ],
+    "tabler": [
+      "@tabler/icons-react"
+    ],
+    "phosphor": [
+      "@phosphor-icons/react"
+    ],
+    "remixicon": [
+      "@remixicon/react"
+    ],
+    "hugeicons": [
+      "@hugeicons/react",
+      "@hugeicons/core-free-icons"
+    ]
+  }
+}
